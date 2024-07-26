@@ -4,12 +4,14 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="Dev" class="org.example.Dev">
+    <bean id="Dev" class="org.example.Dev" autowire="byName">
 <!--        <property name="age" value="12"/>-->
 <!--        <constructor-arg value="14"/>-->
-        <property name="laptop" ref="lap1"/>
+<!--        <property name="com" ref="lap1"/>-->
     </bean>
-    <bean id="lap1" class="org.example.laptop">
+    <bean id="com" class="org.example.laptop">
+    </bean>
+    <bean id="desk" class="org.example.Desktop">
     </bean>
 
 </beans>
